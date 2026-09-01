@@ -1,0 +1,652 @@
+.main {
+    min-height: 100vh;
+
+    background-color: #fffdf8;
+}
+
+
+/* =====================================
+   HERO
+===================================== */
+
+.hero {
+    min-height: 430px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 65px 9%;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            120deg,
+            #fff2bd 0%,
+            #fff7d9 52%,
+            #fde8ed 100%
+        );
+}
+
+
+.heroContent {
+    max-width: 650px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.tag {
+    display: inline-block;
+
+    padding: 8px 15px;
+
+    margin-bottom: 18px;
+
+    border-radius: 30px;
+
+    background-color: #ffffff;
+
+    color: #c45d75;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    box-shadow: 0 4px 12px rgba(120, 80, 70, 0.08);
+}
+
+
+.hero h1 {
+    color: #604c55;
+
+    font-size: clamp(42px, 5vw, 65px);
+
+    font-weight: 400;
+
+    line-height: 1.05;
+
+    margin-bottom: 20px;
+}
+
+
+.hero h1 strong {
+    display: block;
+
+    color: #b6546e;
+
+    font-weight: 800;
+}
+
+
+.hero p {
+    max-width: 570px;
+
+    color: #806d74;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    margin-bottom: 28px;
+}
+
+
+/* =====================================
+   BOTÕES
+===================================== */
+
+.buttons {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.primaryButton,
+.secondaryButton {
+    padding: 14px 24px;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    transition: 0.2s;
+}
+
+
+.primaryButton {
+    background-color: #d45b76;
+
+    color: white;
+
+    box-shadow: 0 6px 15px rgba(190, 80, 105, 0.2);
+}
+
+
+.primaryButton:hover {
+    background-color: #bd4863;
+
+    transform: translateY(-2px);
+}
+
+
+.secondaryButton {
+    background-color: white;
+
+    color: #a35468;
+
+    border: 1px solid #edcbd3;
+}
+
+
+.secondaryButton:hover {
+    background-color: #fde8ed;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================
+   DECORAÇÃO
+===================================== */
+
+.decoration {
+    width: 390px;
+
+    height: 330px;
+
+    position: relative;
+
+    flex-shrink: 0;
+}
+
+
+.bigCircle {
+    position: absolute;
+
+    width: 270px;
+    height: 270px;
+
+    top: 25px;
+    right: 35px;
+
+    border-radius: 50%;
+
+    background-color: #f7d7df;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: rotate(-7deg);
+
+    box-shadow: 13px 13px 0 #f1df99;
+}
+
+
+.bigCircle span {
+    color: #e30613;
+
+    font-size: 58px;
+
+    font-weight: 900;
+
+    transform: rotate(7deg);
+}
+
+
+.yellowCircle {
+    position: absolute;
+
+    width: 70px;
+    height: 70px;
+
+    right: 0;
+    bottom: 15px;
+
+    border-radius: 50%;
+
+    background-color: #efd875;
+}
+
+
+.pinkSquare {
+    position: absolute;
+
+    width: 75px;
+    height: 75px;
+
+    top: 15px;
+    left: 5px;
+
+    background-color: #e7b8c5;
+
+    border-radius: 13px;
+
+    transform: rotate(17deg);
+}
+
+
+.smallStar {
+    position: absolute;
+
+    right: 40px;
+    top: -5px;
+
+    color: #d45b76;
+
+    font-size: 35px;
+}
+
+
+/* =====================================
+   ACESSOS RÁPIDOS
+===================================== */
+
+.quickSection {
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 50px 25px;
+}
+
+
+.sectionHeader {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+}
+
+
+.sectionHeader > div:first-child {
+    flex-shrink: 0;
+}
+
+
+.sectionHeader span {
+    color: #d45b76;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+
+.sectionHeader h2 {
+    color: #604c55;
+
+    font-size: 26px;
+
+    margin-top: 3px;
+}
+
+
+.line {
+    height: 2px;
+
+    width: 100%;
+
+    background-color: #edcbd3;
+}
+
+
+/* =====================================
+   CARDS
+===================================== */
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+
+.card {
+    min-height: 190px;
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 24px;
+
+    background-color: white;
+
+    border: 1px solid #f0e1dc;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 18px rgba(120, 85, 70, 0.06);
+
+    transition: 0.25s;
+}
+
+
+.card:nth-child(1),
+.card:nth-child(3) {
+    border-top: 5px solid #efd36e;
+}
+
+
+.card:nth-child(2),
+.card:nth-child(4) {
+    border-top: 5px solid #e5b6c4;
+}
+
+
+.card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 12px 25px rgba(120, 85, 70, 0.12);
+}
+
+
+.icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    font-size: 23px;
+
+    margin-bottom: 18px;
+}
+
+
+.yellowIcon {
+    background-color: #fff2bc;
+}
+
+
+.pinkIcon {
+    background-color: #fde6eb;
+}
+
+
+.cardContent h3 {
+    color: #624f57;
+
+    font-size: 18px;
+
+    margin-bottom: 8px;
+}
+
+
+.cardContent p {
+    color: #927d84;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    max-width: 210px;
+}
+
+
+.arrow {
+    position: absolute;
+
+    right: 20px;
+    bottom: 17px;
+
+    color: #d45b76;
+
+    font-size: 22px;
+
+    transition: 0.2s;
+}
+
+
+.card:hover .arrow {
+    transform: translateX(5px);
+}
+
+
+/* =====================================
+   INFORMAÇÃO
+===================================== */
+
+.infoSection {
+    max-width: 1200px;
+
+    margin: 5px auto 55px;
+
+    padding: 30px 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    background-color: #fff3c5;
+
+    border-radius: 14px;
+
+    border-left: 6px solid #e6c95e;
+}
+
+
+.infoDecoration {
+    width: 55px;
+    height: 55px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: white;
+
+    color: #d45b76;
+
+    font-size: 25px;
+}
+
+
+.infoText span {
+    color: #b1802e;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+
+.infoText h2 {
+    color: #604c55;
+
+    font-size: 22px;
+
+    margin: 4px 0 7px;
+}
+
+
+.infoText p {
+    color: #857278;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.footer {
+    min-height: 85px;
+
+    padding: 20px 8%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background-color: #f8dfe5;
+
+    color: #795b65;
+}
+
+
+.footer div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.footer strong {
+    color: #e30613;
+
+    font-size: 22px;
+}
+
+
+.footer span {
+    font-size: 13px;
+}
+
+
+.footer p {
+    font-size: 13px;
+
+    color: #967681;
+}
+
+
+/* =====================================
+   RESPONSIVO
+===================================== */
+
+@media (max-width: 1050px) {
+
+    .hero {
+        padding: 55px 6%;
+    }
+
+    .decoration {
+        width: 300px;
+    }
+
+    .bigCircle {
+        width: 220px;
+        height: 220px;
+    }
+
+    .bigCircle span {
+        font-size: 45px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 750px) {
+
+    .hero {
+        padding: 50px 25px;
+
+        min-height: auto;
+    }
+
+    .decoration {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .buttons {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .sectionHeader {
+        align-items: flex-start;
+    }
+
+    .line {
+        display: none;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .infoSection {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .footer {
+        flex-direction: column;
+
+        gap: 10px;
+
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 450px) {
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero {
+        padding: 40px 20px;
+    }
+
+    .quickSection {
+        padding: 40px 18px;
+    }
+}
