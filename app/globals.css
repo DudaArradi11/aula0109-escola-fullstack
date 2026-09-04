@@ -200,3 +200,1047 @@ a {
         padding: 8px;
     }
 }
+/* ==============================
+   CADASTRO DE ALUNOS
+============================== */
+
+.cadastro-main {
+    min-height: calc(100vh - 143px);
+    background-color: #fffdf8;
+}
+
+.cadastro-container {
+    min-height: calc(100vh - 143px);
+    padding: 65px 9%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #fff2bd 0%,
+            #fff7d9 52%,
+            #fde8ed 100%
+        );
+}
+
+.cadastro-intro {
+    max-width: 570px;
+}
+
+.cadastro-intro > span {
+    display: inline-block;
+
+    padding: 8px 15px;
+    margin-bottom: 18px;
+
+    border-radius: 30px;
+
+    background-color: white;
+
+    color: #c45d75;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    box-shadow: 0 4px 12px rgba(120, 80, 70, 0.08);
+}
+
+.cadastro-intro h1 {
+    color: #604c55;
+
+    font-size: clamp(42px, 5vw, 62px);
+
+    font-weight: 400;
+
+    line-height: 1.05;
+
+    margin-bottom: 20px;
+}
+
+.cadastro-intro h1 strong {
+    display: block;
+
+    color: #b6546e;
+
+    font-weight: 800;
+}
+
+.cadastro-intro p {
+    max-width: 500px;
+
+    color: #806d74;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+
+/* CARD */
+
+.cadastro-card {
+    width: 100%;
+    max-width: 560px;
+
+    justify-self: end;
+
+    padding: 35px;
+
+    background-color: white;
+
+    border: 1px solid #f0e1dc;
+
+    border-top: 5px solid #efd36e;
+
+    border-radius: 14px;
+
+    box-shadow: 0 12px 30px rgba(120, 85, 70, 0.10);
+}
+
+.cadastro-card-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 28px;
+}
+
+.cadastro-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background-color: #fde6eb;
+
+    font-size: 25px;
+}
+
+.cadastro-card-header span {
+    color: #d45b76;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.cadastro-card-header h2 {
+    color: #604c55;
+
+    font-size: 24px;
+
+    margin-top: 4px;
+}
+
+
+/* FORMULÁRIO */
+
+.cadastro-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.cadastro-linha {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+.cadastro-campo {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.cadastro-campo label {
+    color: #604c55;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+.cadastro-campo input {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 1px solid #edcbd3;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background-color: #fffdf8;
+
+    color: #604c55;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.cadastro-campo input::placeholder {
+    color: #b5a4a9;
+}
+
+.cadastro-campo input:focus {
+    border-color: #d45b76;
+
+    background-color: white;
+
+    box-shadow: 0 0 0 3px rgba(212, 91, 118, 0.10);
+}
+
+
+/* BOTÃO */
+
+.cadastro-botao {
+    width: 100%;
+
+    margin-top: 5px;
+
+    padding: 15px 24px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #d45b76;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow: 0 6px 15px rgba(190, 80, 105, 0.20);
+
+    transition: 0.2s;
+}
+
+.cadastro-botao:hover {
+    background-color: #bd4863;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==============================
+   CADASTRO RESPONSIVO
+============================== */
+
+@media (max-width: 950px) {
+
+    .cadastro-container {
+        grid-template-columns: 1fr;
+
+        padding: 55px 6%;
+
+        gap: 35px;
+    }
+
+    .cadastro-card {
+        justify-self: center;
+
+        max-width: 650px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .cadastro-container {
+        padding: 45px 25px;
+    }
+
+    .cadastro-intro h1 {
+        font-size: 43px;
+    }
+
+    .cadastro-intro p {
+        font-size: 16px;
+    }
+
+    .cadastro-card {
+        padding: 25px;
+    }
+
+    .cadastro-linha {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .cadastro-container {
+        padding: 40px 20px;
+    }
+
+    .cadastro-intro h1 {
+        font-size: 36px;
+    }
+
+}
+/* ==============================
+   LISTA DE ALUNOS
+============================== */
+
+body:has(table) {
+    background:
+        linear-gradient(
+            120deg,
+            #fff2bd 0%,
+            #fff7d9 52%,
+            #fde8ed 100%
+        );
+}
+
+body:has(table) > h2 {
+    max-width: 1450px;
+    margin: 0 auto;
+
+    padding: 55px 30px 25px;
+
+    color: #604c55;
+
+    font-size: 32px;
+    font-weight: 700;
+}
+
+body:has(table) table {
+    width: calc(100% - 60px);
+    max-width: 1450px;
+
+    margin: 0 auto 60px;
+
+    border-collapse: separate;
+    border-spacing: 0;
+
+    background-color: white;
+
+    border: 1px solid #f0e1dc;
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(120, 85, 70, 0.08);
+}
+
+
+/* CABEÇALHO */
+
+body:has(table) thead {
+    background-color: #f8dfe5;
+}
+
+body:has(table) th {
+    padding: 17px 20px;
+
+    color: #604c55;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    text-align: left;
+
+    border-bottom: 2px solid #edcbd3;
+}
+
+
+/* DADOS */
+
+body:has(table) td {
+    padding: 17px 20px;
+
+    color: #806d74;
+
+    font-size: 14px;
+
+    border-bottom: 1px solid #f3e5e2;
+}
+
+body:has(table) tbody tr:hover {
+    background-color: #fffaf0;
+}
+
+body:has(table) tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* BOTÕES */
+
+body:has(table) button {
+    padding: 9px 16px;
+
+    margin-right: 8px;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+/* EDITAR */
+
+body:has(table) button:first-of-type {
+    background-color: #fff2bc;
+
+    color: #96752b;
+
+    border: 1px solid #efd875;
+}
+
+body:has(table) button:first-of-type:hover {
+    background-color: #efd875;
+
+    transform: translateY(-2px);
+}
+
+
+/* EXCLUIR */
+
+body:has(table) button:last-of-type {
+    background-color: #fde6eb;
+
+    color: #c45d75;
+
+    border: 1px solid #edcbd3;
+}
+
+body:has(table) button:last-of-type:hover {
+    background-color: #f7d7df;
+
+    transform: translateY(-2px);
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 800px) {
+
+    body:has(table) {
+        overflow-x: auto;
+    }
+
+    body:has(table) > h2 {
+        padding: 40px 20px 20px;
+
+        font-size: 27px;
+    }
+
+    body:has(table) table {
+        width: 850px;
+
+        margin-left: 20px;
+    }
+}
+
+
+/* TÍTULO */
+
+body:has(table) > h2 {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 55px 25px 25px;
+
+    color: #604c55;
+
+    font-size: 32px;
+
+    font-weight: 700;
+}
+
+
+/* TABELA */
+
+body:has(table) table {
+    width: calc(100% - 50px);
+
+    max-width: 1200px;
+
+    margin: 0 auto 60px;
+
+    border-collapse: separate;
+
+    border-spacing: 0;
+
+    background-color: white;
+
+    border: 1px solid #f0e1dc;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(120, 85, 70, 0.08);
+}
+
+
+/* CABEÇALHO */
+
+body:has(table) thead {
+    background-color: #f8dfe5;
+}
+
+body:has(table) thead tr {
+    background-color: #f8dfe5;
+}
+
+body:has(table) th {
+    padding: 17px 20px;
+
+    color: #604c55;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    text-align: left;
+
+    border-bottom: 2px solid #edcbd3;
+}
+
+
+/* CÉLULAS */
+
+body:has(table) td {
+    padding: 17px 20px;
+
+    color: #806d74;
+
+    font-size: 14px;
+
+    border-bottom: 1px solid #f3e5e2;
+}
+
+
+/* EFEITO NAS LINHAS */
+
+body:has(table) tbody tr {
+    transition: 0.2s;
+}
+
+body:has(table) tbody tr:hover {
+    background-color: #fffaf0;
+}
+
+body:has(table) tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* BOTÕES */
+
+body:has(table) button {
+    padding: 9px 16px;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+/* EDITAR */
+
+body:has(table) td:nth-last-child(2) button {
+    background-color: #fff2bc;
+
+    color: #96752b;
+
+    border: 1px solid #efd875;
+}
+
+body:has(table) td:nth-last-child(2) button:hover {
+    background-color: #efd875;
+
+    transform: translateY(-2px);
+}
+
+
+/* EXCLUIR */
+
+body:has(table) td:last-child button {
+    background-color: #fde6eb;
+
+    color: #c45d75;
+
+    border: 1px solid #edcbd3;
+}
+
+body:has(table) td:last-child button:hover {
+    background-color: #f7d7df;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==============================
+   RESPONSIVO
+============================== */
+
+@media (max-width: 800px) {
+
+    body:has(table) {
+        overflow-x: auto;
+    }
+
+    body:has(table) > h2 {
+        padding: 40px 20px 20px;
+
+        font-size: 27px;
+    }
+
+    body:has(table) table {
+        width: 750px;
+
+        margin-left: 20px;
+
+        margin-right: 20px;
+    }
+}
+/* ==============================
+   LISTA DE NOTAS
+============================== */
+
+.lista-page {
+    min-height: calc(100vh - 143px);
+
+    padding: 55px 7% 70px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #fff2bd 0%,
+            #fff7d9 52%,
+            #fde8ed 100%
+        );
+}
+
+
+/* TÍTULO */
+
+.lista-page h2 {
+    max-width: 1250px;
+
+    margin: 0 auto 30px;
+
+    color: #604c55;
+
+    font-size: 32px;
+
+    font-weight: 700;
+}
+
+
+/* ==============================
+   TABELA
+============================== */
+
+.lista-page table {
+    width: 100%;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    border-collapse: separate;
+
+    border-spacing: 0;
+
+    background-color: white;
+
+    border: 1px solid #f0e1dc;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(120, 85, 70, 0.08);
+}
+
+
+/* CABEÇALHO */
+
+.lista-page thead {
+    background-color: #f8dfe5;
+}
+
+.lista-page th {
+    padding: 17px 15px;
+
+    color: #604c55;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    text-align: left;
+
+    border-bottom: 2px solid #edcbd3;
+
+    white-space: nowrap;
+}
+
+
+/* DADOS */
+
+.lista-page td {
+    padding: 17px 15px;
+
+    color: #806d74;
+
+    font-size: 14px;
+
+    border-bottom: 1px solid #f3e5e2;
+
+    white-space: nowrap;
+}
+
+
+/* LINHAS */
+
+.lista-page tbody tr {
+    transition: 0.2s;
+}
+
+.lista-page tbody tr:hover {
+    background-color: #fffaf0;
+}
+
+.lista-page tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* ==============================
+   AÇÕES
+============================== */
+
+.acoes {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+/* BOTÕES */
+
+.acoes button {
+    padding: 9px 14px;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+/* EDITAR */
+
+.btn-editar {
+    background-color: #fff2bc;
+
+    color: #96752b;
+
+    border: 1px solid #efd875;
+}
+
+.btn-editar:hover {
+    background-color: #efd875;
+
+    transform: translateY(-2px);
+}
+
+
+/* DELETAR */
+
+.btn-deletar {
+    background-color: #fde6eb;
+
+    color: #c45d75;
+
+    border: 1px solid #edcbd3;
+}
+
+.btn-deletar:hover {
+    background-color: #f7d7df;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==============================
+   RESPONSIVO
+============================== */
+
+@media (max-width: 950px) {
+
+    .lista-page {
+        padding: 45px 20px 60px;
+
+        overflow-x: auto;
+    }
+
+    .lista-page h2 {
+        font-size: 28px;
+    }
+
+    .lista-page table {
+        min-width: 950px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .lista-page {
+        padding: 40px 15px 50px;
+    }
+
+    .lista-page h2 {
+        font-size: 25px;
+    }
+}
+/* ==============================
+   CADASTRO DE NOTAS
+============================== */
+
+.cadnotas-page {
+    min-height: calc(100vh - 143px);
+
+    padding: 55px 7% 70px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #fff2bd 0%,
+            #fff7d9 52%,
+            #fde8ed 100%
+        );
+}
+
+
+/* TÍTULO */
+
+.cadnotas-page h2 {
+    max-width: 850px;
+
+    margin: 0 auto 30px;
+
+    color: #604c55;
+
+    font-size: 32px;
+
+    font-weight: 700;
+}
+
+
+/* FORMULÁRIO */
+
+.cadnotas-form {
+    width: 100%;
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 35px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+    background-color: white;
+
+    border: 1px solid #f0e1dc;
+
+    border-top: 5px solid #efd36e;
+
+    border-radius: 14px;
+
+    box-shadow: 0 10px 28px rgba(120, 85, 70, 0.09);
+}
+
+
+/* LABELS */
+
+.cadnotas-form label {
+    color: #604c55;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+
+/* INPUTS */
+
+.cadnotas-form input {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 1px solid #edcbd3;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background-color: #fffdf8;
+
+    color: #604c55;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.cadnotas-form input:focus {
+    border-color: #d45b76;
+
+    background-color: white;
+
+    box-shadow: 0 0 0 3px rgba(212, 91, 118, 0.10);
+}
+
+.cadnotas-form input::placeholder {
+    color: #b5a4a9;
+}
+
+
+/* ORGANIZAÇÃO DOS CAMPOS */
+
+.cadnotas-form label {
+    margin-bottom: -12px;
+}
+
+
+/* NOME DO ALUNO */
+
+.cadnotas-form label:first-child {
+    grid-column: 1 / -1;
+}
+
+.cadnotas-form input:nth-of-type(1) {
+    grid-column: 1 / -1;
+}
+
+
+/* BOTÃO */
+
+.cadnotas-form button {
+    grid-column: 1 / -1;
+
+    width: 100%;
+
+    margin-top: 5px;
+
+    padding: 15px 24px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #d45b76;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow: 0 6px 15px rgba(190, 80, 105, 0.20);
+
+    transition: 0.2s;
+}
+
+.cadnotas-form button:hover {
+    background-color: #bd4863;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==============================
+   RESPONSIVO
+============================== */
+
+@media (max-width: 700px) {
+
+    .cadnotas-page {
+        padding: 45px 20px 60px;
+    }
+
+    .cadnotas-page h2 {
+        font-size: 28px;
+    }
+
+    .cadnotas-form {
+        grid-template-columns: 1fr;
+
+        padding: 25px;
+    }
+
+    .cadnotas-form label:first-child {
+        grid-column: auto;
+    }
+
+    .cadnotas-form input:nth-of-type(1) {
+        grid-column: auto;
+    }
+
+    .cadnotas-form button {
+        grid-column: auto;
+    }
+}

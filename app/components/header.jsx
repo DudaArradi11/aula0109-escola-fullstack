@@ -27,9 +27,9 @@ export default function Header() {
 
                 <nav className="nav">
                     <Link href="/">Início</Link>
-                    <Link href="/cadalunos">Alunos</Link>
+                    <Link href="/cadalunos">Cadastrar Alunos</Link>
                     <Link href="/listalunos">Lista de Alunos</Link>
-                    <Link href="/cadnotas">Notas</Link>
+                    <Link href="/cadnotas">Cadastrar Notas</Link>
                     <Link href="/listnotas">Lista de Notas</Link>
                 </nav>
 
