@@ -1244,3 +1244,237 @@ body:has(table) td:last-child button:hover {
         grid-column: auto;
     }
 }
+
+/* ==============================
+   EDITAR ALUNO
+============================== */
+
+.editar-form {
+    width: calc(100% - 50px);
+    max-width: 1200px;
+
+    margin: 0 auto 35px;
+
+    padding: 30px;
+
+    background-color: white;
+
+    border: 1px solid #f0e1dc;
+    border-top: 5px solid #efd36e;
+
+    border-radius: 14px;
+
+    box-shadow: 0 8px 25px rgba(120, 85, 70, 0.08);
+}
+
+
+/* CABEÇALHO */
+
+.editar-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+.editar-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background-color: #fde6eb;
+
+    font-size: 22px;
+}
+
+.editar-header span {
+    color: #d45b76;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+.editar-header h3 {
+    margin-top: 3px;
+
+    color: #604c55;
+
+    font-size: 23px;
+}
+
+
+/* CAMPOS */
+
+.editar-campos {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+}
+
+.editar-campo {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.editar-campo label {
+    color: #604c55;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.editar-campo input {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #edcbd3;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background-color: #fffdf8;
+
+    color: #604c55;
+
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.editar-campo input:focus {
+    border-color: #d45b76;
+
+    background-color: white;
+
+    box-shadow: 0 0 0 3px rgba(212, 91, 118, 0.10);
+}
+
+
+/* AÇÕES */
+
+.editar-acoes {
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+}
+
+
+/* CANCELAR */
+
+.btn-cancelar {
+    padding: 11px 20px;
+
+    border-radius: 8px;
+
+    border: 1px solid #edcbd3;
+
+    background-color: #fde6eb;
+
+    color: #c45d75;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn-cancelar:hover {
+    background-color: #f7d7df;
+
+    transform: translateY(-2px);
+}
+
+
+/* SALVAR */
+
+.btn-salvar {
+    padding: 11px 22px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background-color: #d45b76;
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 12px rgba(190, 80, 105, 0.18);
+
+    transition: 0.2s;
+}
+
+.btn-salvar:hover {
+    background-color: #bd4863;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==============================
+   RESPONSIVO
+============================== */
+
+@media (max-width: 900px) {
+
+    .editar-campos {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .editar-form {
+        width: calc(100% - 30px);
+
+        padding: 25px;
+    }
+
+    .editar-campos {
+        grid-template-columns: 1fr;
+    }
+
+    .editar-acoes {
+        flex-direction: column;
+    }
+
+    .btn-cancelar,
+    .btn-salvar {
+        width: 100%;
+    }
+
+}
