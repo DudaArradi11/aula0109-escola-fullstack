@@ -1,40 +1,22 @@
 import Link from "next/link";
+import styles from "./header.module.css";
 
 export default function Header() {
     return (
-        <header className="header">
+        <>
+            <header className={styles.header}>
+                <h1 className={styles.logo}>Sistema Escolar - SESI</h1>
 
-            <div className="topBar">
-                <span>SESI</span>
-                <span>Educação</span>
-                <span>Mirandópolis</span>
-            </div>
-
-            <div className="headerMain">
-
-                <Link href="/" className="logo">
-
-                    <div className="logoBox">
-                        SESI
-                    </div>
-
-                    <div className="logoText">
-                        <strong>SISTEMA ESCOLAR</strong>
-                        <span>Mirandópolis</span>
-                    </div>
-
-                </Link>
-
-                <nav className="nav">
-                    <Link href="/">Início</Link>
-                    <Link href="/cadalunos">Cadastrar Alunos</Link>
-                    <Link href="/listalunos">Lista de Alunos</Link>
-                    <Link href="/cadnotas">Cadastrar Notas</Link>
-                    <Link href="/listnotas">Lista de Notas</Link>
+                <nav>
+                    <ul className={styles.menu}>
+                        <li><Link href="/">Início</Link></li>
+                        <li><Link href="/cadalunos">Cadastro - Alunos</Link></li>
+                        <li><Link href="/listalunos">Lista - Alunos</Link></li>
+                        <li><Link href="/cadnotas">Cadastro - Notas</Link></li>
+                        <li><Link href="/listnotas">Lista - Notas</Link></li>
+                    </ul>
                 </nav>
-
-            </div>
-
-        </header>
+            </header>
+        </>
     );
 }

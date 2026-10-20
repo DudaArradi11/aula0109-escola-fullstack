@@ -1,0 +1,90 @@
+
+.main {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: linear-gradient(
+        135deg,
+        #fff2bd,
+        #fff7d9,
+        #fde8ed
+    );
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.painel {
+    padding: 30px;
+    background: #fffdf8;
+    border: 1px solid #f0dfe2;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(96, 76, 85, 0.08);
+}
+
+.status {
+    color: #d45b76;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.painel h2 {
+    margin: 15px 0 25px;
+    color: #604c55;
+}
+
+.tabelaContainer {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tabela {
+    width: 100%;
+    border-collapse: collapse;
+    color: #604c55;
+    background: white;
+}
+
+.tabela th,
+.tabela td {
+    padding: 14px 12px;
+    text-align: center;
+    border-bottom: 1px solid #f0dfe2;
+}
+
+.tabela th {
+    background: #f8dfe5;
+    font-weight: bold;
+}
+
+.tabela tbody tr:hover {
+    background: #fff7f8;
+}
+
+.btnDeletar {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    background: #d45b76;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btnDeletar:hover {
+    background: #b84460;
+}
+
+@media (max-width: 768px) {
+    .painel {
+        padding: 20px 12px;
+    }
+
+    .tabela th,
+    .tabela td {
+        padding: 10px;
+        white-space: nowrap;
+    }
+}

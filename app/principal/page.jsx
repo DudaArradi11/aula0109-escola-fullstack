@@ -1,6 +1,5 @@
-import Link from "next/link";
 import Header from "../components/header";
-import styles from "../page.module.css";
+import styles from "./principal.module.css";
 
 export default function Principal() {
     return (
@@ -8,257 +7,115 @@ export default function Principal() {
             <Header />
 
             <main className={styles.main}>
-
-                {/* BANNER PRINCIPAL */}
-
                 <section className={styles.hero}>
-
-                    <div className={styles.heroContent}>
-
-                        <span className={styles.tag}>
-                            SISTEMA ESCOLAR SESI
-                        </span>
-
-                        <h1>
-                            Bem-vindo ao
-                            <strong>Sistema Escolar</strong>
-                        </h1>
-
-                        <p>
-                            Aqui você pode consultar alunos, cadastrar
-                            informações e acompanhar as notas de forma
-                            simples e organizada.
-                        </p>
-
-                        <div className={styles.buttons}>
-
-                            <Link
-                                href="/listalunos"
-                                className={styles.primaryButton}
-                            >
-                                Ver alunos
-                            </Link>
-
-                            <Link
-                                href="/listnotas"
-                                className={styles.secondaryButton}
-                            >
-                                Consultar notas
-                            </Link>
-
-                        </div>
-
-                    </div>
-
-
-                    {/* DECORAÇÃO */}
-
-                    <div className={styles.decoration}>
-
-                        <div className={styles.bigCircle}>
-                            <span>SESI</span>
-                        </div>
-
-                        <div className={styles.yellowCircle}></div>
-
-                        <div className={styles.pinkSquare}></div>
-
-                        <div className={styles.smallStar}>
-                            ✦
-                        </div>
-
-                    </div>
-
-                </section>
-
-
-                {/* ACESSOS RÁPIDOS */}
-
-                <section className={styles.quickSection}>
-
-                    <div className={styles.sectionHeader}>
-
-                        <div>
-                            <span>ACESSO RÁPIDO</span>
-                            <h2>O que você precisa?</h2>
-                        </div>
-
-                        <div className={styles.line}></div>
-
-                    </div>
-
-
-                    <div className={styles.cards}>
-
-                        <Link
-                            href="/cadalunos"
-                            className={styles.card}
-                        >
-
-                            <div
-                                className={`${styles.icon} ${styles.yellowIcon}`}
-                            >
-                                👨‍🎓
-                            </div>
-
-                            <div className={styles.cardContent}>
-
-                                <h3>
-                                    Cadastrar aluno
-                                </h3>
-
-                                <p>
-                                    Cadastre um novo aluno no sistema escolar.
-                                </p>
-
-                            </div>
-
-                            <span className={styles.arrow}>
-                                →
-                            </span>
-
-                        </Link>
-
-
-                        <Link
-                            href="/listalunos"
-                            className={styles.card}
-                        >
-
-                            <div
-                                className={`${styles.icon} ${styles.pinkIcon}`}
-                            >
-                                📋
-                            </div>
-
-                            <div className={styles.cardContent}>
-
-                                <h3>
-                                    Lista de alunos
-                                </h3>
-
-                                <p>
-                                    Consulte todos os alunos cadastrados.
-                                </p>
-
-                            </div>
-
-                            <span className={styles.arrow}>
-                                →
-                            </span>
-
-                        </Link>
-
-
-                        <Link
-                            href="/cadnotas"
-                            className={styles.card}
-                        >
-
-                            <div
-                                className={`${styles.icon} ${styles.yellowIcon}`}
-                            >
-                                📝
-                            </div>
-
-                            <div className={styles.cardContent}>
-
-                                <h3>
-                                    Cadastrar notas
-                                </h3>
-
-                                <p>
-                                    Registre as notas e avaliações dos alunos.
-                                </p>
-
-                            </div>
-
-                            <span className={styles.arrow}>
-                                →
-                            </span>
-
-                        </Link>
-
-
-                        <Link
-                            href="/listnotas"
-                            className={styles.card}
-                        >
-
-                            <div
-                                className={`${styles.icon} ${styles.pinkIcon}`}
-                            >
-                                📊
-                            </div>
-
-                            <div className={styles.cardContent}>
-
-                                <h3>
-                                    Lista de notas
-                                </h3>
-
-                                <p>
-                                    Visualize e consulte as notas registradas.
-                                </p>
-
-                            </div>
-
-                            <span className={styles.arrow}>
-                                →
-                            </span>
-
-                        </Link>
-
-                    </div>
-
-                </section>
-
-
-                {/* ÁREA INFORMATIVA */}
-
-                <section className={styles.infoSection}>
-
-                    <div className={styles.infoDecoration}>
-                        ✦
-                    </div>
-
-                    <div className={styles.infoText}>
-
-                        <span>
-                            SESI MIRANDÓPOLIS
-                        </span>
-
-                        <h2>
-                            Tudo organizado em um só lugar.
-                        </h2>
-
-                        <p>
-                            Utilize o sistema para facilitar o gerenciamento
-                            das informações escolares e encontrar rapidamente
-                            o que você precisa.
-                        </p>
-
-                    </div>
-
-                </section>
-
-
-                {/* RODAPÉ */}
-
-                <footer className={styles.footer}>
-
-                    <div>
-                        <strong>SESI</strong>
-                        <span>Sistema Escolar</span>
-                    </div>
-
-                    <p>
-                        Sistema Escolar SESI Mirandópolis
+                    <p className={styles.status}>
+                        SISTEMA ONLINE ● ANO LETIVO 2026
                     </p>
 
-                </footer>
+                    <h2>
+                        Bem-vindo ao Sistema Escolar
+                        <span> SESI Mirandópolis</span>
+                    </h2>
 
+                    <p>
+                        Plataforma de gerenciamento acadêmico para
+                        acompanhamento de alunos, notas, frequência e
+                        desenvolvimento educacional.
+                    </p>
+
+                    <button className={styles.btn}>
+                        Acessar Portal
+                    </button>
+                </section>
+
+                <section className={styles.cards}>
+                    <div className={styles.card}>
+                        <h3>👨‍🎓 Alunos</h3>
+                        <p>
+                            Gerencie informações cadastrais e histórico dos
+                            estudantes.
+                        </p>
+                    </div>
+
+                    <div className={styles.card}>
+                        <h3>📊 Notas</h3>
+                        <p>
+                            Consulte e acompanhe o desempenho acadêmico.
+                        </p>
+                    </div>
+
+                    <div className={styles.card}>
+                        <h3>📅 Frequência</h3>
+                        <p>
+                            Controle presenças e faltas em tempo real.
+                        </p>
+                    </div>
+
+                    <div className={styles.card}>
+                        <h3>🚀 Projetos</h3>
+                        <p>
+                            Monitore projetos e atividades desenvolvidas pelos
+                            estudantes.
+                        </p>
+                    </div>
+                </section>
+
+                <section className={styles.dashboard}>
+                    <h2>Painel Escolar</h2>
+
+                    <div className={styles.stats}>
+                        <div className={styles.stat}>
+                            <h3>645</h3>
+                            <p>Alunos</p>
+                        </div>
+
+                        <div className={styles.stat}>
+                            <h3>32</h3>
+                            <p>Turmas</p>
+                        </div>
+
+                        <div className={styles.stat}>
+                            <h3>95%</h3>
+                            <p>Frequência Média</p>
+                        </div>
+
+                        <div className={styles.stat}>
+                            <h3>28</h3>
+                            <p>Projetos Ativos</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section className={styles.timeline}>
+                    <h2>Linha do Tempo Acadêmica</h2>
+
+                    <div className={styles.event}>
+                        <span>01</span>
+                        <p>Início do Ano Letivo</p>
+                    </div>
+
+                    <div className={styles.event}>
+                        <span>02</span>
+                        <p>Avaliações Bimestrais</p>
+                    </div>
+
+                    <div className={styles.event}>
+                        <span>03</span>
+                        <p>Feira Tecnológica</p>
+                    </div>
+
+                    <div className={styles.event}>
+                        <span>04</span>
+                        <p>Encerramento do Semestre</p>
+                    </div>
+                </section>
             </main>
+
+            <footer className={styles.footer}>
+                <p>
+                    SESI Mirandópolis • Sistema Escolar Futurista © 2026
+                </p>
+            </footer>
         </>
     );
 }

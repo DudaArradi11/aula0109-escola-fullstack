@@ -1,78 +1,171 @@
-'use client';
-import { useState } from "react";
-import Header from "../components/header";
 
-export default function CadNotas(){
-    const [nomeAluno, setNomeAluno] = useState('');
+'use client';
+
+import { useState, useEffect } from "react";
+import Header from "../components/header";
+import styles from "./cadnotas.module.css";
+
+export default function CadNotas() {
+    const [aluno_id, setAlunoId] = useState('');
     const [t1, setT1] = useState('');
     const [t2, setT2] = useState('');
     const [n1, setN1] = useState('');
     const [n2, setN2] = useState('');
     const [n3, setN3] = useState('');
+    const [alunos, setAlunos] = useState([]);
 
-    return(
+    useEffect(() => {
+        buscarAlunos();
+    }, []);
+
+    async function buscarAlunos() {
+        const resposta = await fetch("/api/alunos");
+        const dados = await resposta.json();
+        setAlunos(dados);
+    }
+
+    async function cadastraNotas(event) {
+        event.preventDefault();
+
+        const resposta = await fetch("/api/notas", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                aluno_id,
+                t1,
+                t2,
+                n1,
+                n2,
+                n3
+            })
+        });
+
+        const dados = await resposta.json();
+
+        alert(dados.mensagem || dados.erro);
+
+        if (resposta.ok) {
+            setAlunoId('');
+            setT1('');
+            setT2('');
+            setN1('');
+            setN2('');
+            setN3('');
+        }
+    }
+
+    return (
         <>
             <Header />
 
-            <main className="cadnotas-page">
+            <main className={styles.main}>
+                <section className={styles.container}>
+                    <div className={styles.painel}>
+                        <p className={styles.status}>
+                            SISTEMA ONLINE
+                        </p>
 
-                <h2>Cadastro de Notas</h2>
+                        <h2>Cadastro de Notas</h2>
 
-                <form action="" className="cadnotas-form">
+                        <form
+                            className={styles.form}
+                            onSubmit={cadastraNotas}
+                        >
+                            <div className={styles.campo}>
+                                <label htmlFor="aluno_id">
+                                    ID do Aluno
+                                </label>
 
-                    <label htmlFor="nomeAluno">Nome aluno</label>
-                    <input
-                        id="nomeAluno"
-                        type="text"
-                        value={nomeAluno}
-                        onChange={(e) => setNomeAluno(e.target.value)}
-                    />
+                                <select
+                                    id="aluno_id"
+                                    value={aluno_id}
+                                    onChange={(e) =>
+                                        setAlunoId(e.target.value)
+                                    }
+                                    required
+                                >
+                                    <option value="">
+                                        Selecione um aluno
+                                    </option>
 
-                    <label htmlFor="t1">T1 (trabalho 1)</label>
-                    <input
-                        id="t1"
-                        type="number"
-                        value={t1}
-                        onChange={(e) => setT1(e.target.value)}
-                    />
+                                    {alunos.map((aluno) => (
+                                        <option
+                                            key={aluno.id_aluno}
+                                            value={aluno.id_aluno}
+                                        >
+                                            {aluno.nome} - RA {aluno.ra}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
 
-                    <label htmlFor="t2">T2 (trabalho 2)</label>
-                    <input
-                        id="t2"
-                        type="number"
-                        value={t2}
-                        onChange={(e) => setT2(e.target.value)}
-                    />
+                            <div className={styles.campo}>
+                                <label htmlFor="t1">Trabalho 1</label>
+                                <input
+                                    id="t1"
+                                    type="text"
+                                    value={t1}
+                                    onChange={(e) => setT1(e.target.value)}
+                                    required
+                                />
+                            </div>
 
-                    <label htmlFor="n1">N1 (nota 1)</label>
-                    <input
-                        id="n1"
-                        type="number"
-                        value={n1}
-                        onChange={(e) => setN1(e.target.value)}
-                    />
+                            <div className={styles.campo}>
+                                <label htmlFor="t2">Trabalho 2</label>
+                                <input
+                                    id="t2"
+                                    type="text"
+                                    value={t2}
+                                    onChange={(e) => setT2(e.target.value)}
+                                    required
+                                />
+                            </div>
 
-                    <label htmlFor="n2">N2 (nota 2)</label>
-                    <input
-                        id="n2"
-                        type="number"
-                        value={n2}
-                        onChange={(e) => setN2(e.target.value)}
-                    />
+                            <div className={styles.campo}>
+                                <label htmlFor="n1">Nota 1</label>
+                                <input
+                                    id="n1"
+                                    type="number"
+                                    value={n1}
+                                    onChange={(e) => setN1(e.target.value)}
+                                    required
+                                />
+                            </div>
 
-                    <label htmlFor="n3">N3 (nota 3)</label>
-                    <input
-                        id="n3"
-                        type="number"
-                        value={n3}
-                        onChange={(e) => setN3(e.target.value)}
-                    />
+                            <div className={styles.campo}>
+                                <label htmlFor="n2">Nota 2</label>
+                                <input
+                                    id="n2"
+                                    type="number"
+                                    value={n2}
+                                    onChange={(e) => setN2(e.target.value)}
+                                    required
+                                />
+                            </div>
 
-                    <button>Salvar</button>
+                            <div className={styles.campo}>
+                                <label htmlFor="n3">Nota 3</label>
+                                <input
+                                    id="n3"
+                                    type="number"
+                                    value={n3}
+                                    onChange={(e) => setN3(e.target.value)}
+                                    required
+                                />
+                            </div>
 
-                </form>
-
+                            <button
+                                type="submit"
+                                className={styles.botao}
+                            >
+                                Salvar Nota
+                            </button>
+                        </form>
+                    </div>
+                </section>
             </main>
         </>
-    )
+    );
 }
