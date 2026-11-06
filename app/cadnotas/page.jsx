@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState, useEffect } from "react";
@@ -6,13 +5,13 @@ import Header from "../components/header";
 import styles from "./cadnotas.module.css";
 
 export default function CadNotas() {
-    const [aluno_id, setAlunoId] = useState('');
+     const [id_aluno, setIdAluno] = useState('');
     const [t1, setT1] = useState('');
     const [t2, setT2] = useState('');
     const [n1, setN1] = useState('');
     const [n2, setN2] = useState('');
     const [n3, setN3] = useState('');
-    const [alunos, setAlunos] = useState([]);
+    const [alunos, setAlunos] = useState([])
 
     useEffect(() => {
         buscarAlunos();
@@ -24,35 +23,27 @@ export default function CadNotas() {
         setAlunos(dados);
     }
 
+
     async function cadastraNotas(event) {
         event.preventDefault();
-
         const resposta = await fetch("/api/notas", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                aluno_id,
+                id_aluno,
                 t1,
                 t2,
                 n1,
                 n2,
                 n3
             })
-        });
-
+        })
         const dados = await resposta.json();
-
-        alert(dados.mensagem || dados.erro);
-
+        alert(dados.mensagem || dados.erro)
         if (resposta.ok) {
-            setAlunoId('');
-            setT1('');
-            setT2('');
-            setN1('');
-            setN2('');
-            setN3('');
+            redirect("/listnotas")
         }
     }
 
@@ -69,32 +60,18 @@ export default function CadNotas() {
 
                         <h2>Cadastro de Notas</h2>
 
-                        <form
-                            className={styles.form}
-                            onSubmit={cadastraNotas}
-                        >
+                        <form className={styles.form} onSubmit={cadastraNotas}>
                             <div className={styles.campo}>
-                                <label htmlFor="aluno_id">
-                                    ID do Aluno
-                                </label>
-
+                                <label htmlFor="id_aluno">ID do Aluno</label>
                                 <select
-                                    id="aluno_id"
-                                    value={aluno_id}
-                                    onChange={(e) =>
-                                        setAlunoId(e.target.value)
-                                    }
+                                    value={id_aluno}
+                                    onChange={(event) => setIdAluno(event.target.value)}
                                     required
                                 >
-                                    <option value="">
-                                        Selecione um aluno
-                                    </option>
+                                    <option value="">Selecione um aluno</option>
 
                                     {alunos.map((aluno) => (
-                                        <option
-                                            key={aluno.id_aluno}
-                                            value={aluno.id_aluno}
-                                        >
+                                        <option key={aluno.id_aluno} value={aluno.id_aluno}>
                                             {aluno.nome} - RA {aluno.ra}
                                         </option>
                                     ))}
@@ -108,7 +85,6 @@ export default function CadNotas() {
                                     type="text"
                                     value={t1}
                                     onChange={(e) => setT1(e.target.value)}
-                                    required
                                 />
                             </div>
 
@@ -119,7 +95,6 @@ export default function CadNotas() {
                                     type="text"
                                     value={t2}
                                     onChange={(e) => setT2(e.target.value)}
-                                    required
                                 />
                             </div>
 
@@ -130,10 +105,8 @@ export default function CadNotas() {
                                     type="number"
                                     value={n1}
                                     onChange={(e) => setN1(e.target.value)}
-                                    required
                                 />
                             </div>
-
                             <div className={styles.campo}>
                                 <label htmlFor="n2">Nota 2</label>
                                 <input
@@ -141,10 +114,8 @@ export default function CadNotas() {
                                     type="number"
                                     value={n2}
                                     onChange={(e) => setN2(e.target.value)}
-                                    required
                                 />
                             </div>
-
                             <div className={styles.campo}>
                                 <label htmlFor="n3">Nota 3</label>
                                 <input
@@ -152,7 +123,6 @@ export default function CadNotas() {
                                     type="number"
                                     value={n3}
                                     onChange={(e) => setN3(e.target.value)}
-                                    required
                                 />
                             </div>
 

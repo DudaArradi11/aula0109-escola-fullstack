@@ -1,0 +1,166 @@
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+
+    background: radial-gradient(
+        circle at top,
+        #1e1b4b,
+        #050816 70%
+    );
+}
+
+.card {
+    width: 100%;
+    max-width: 450px;
+    padding: 45px;
+
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(0, 229, 255, 0.4);
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 0 15px rgba(0, 229, 255, 0.3),
+        0 0 35px rgba(255, 0, 255, 0.15);
+}
+
+.status {
+    text-align: center;
+    color: #00e5ff;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+
+    text-shadow: 0 0 10px #00e5ff;
+}
+
+.title {
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+
+    text-shadow:
+        0 0 10px #00e5ff,
+        0 0 20px #ff00ff;
+}
+
+.subtitle {
+    text-align: center;
+    color: #cbd5e1;
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.campo label {
+    color: #00e5ff;
+    font-weight: 600;
+}
+
+.campo input {
+    width: 100%;
+    padding: 15px;
+
+    border: 1px solid rgba(0, 229, 255, 0.4);
+    border-radius: 12px;
+
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 1rem;
+
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.campo input:focus {
+    border-color: #00e5ff;
+
+    box-shadow:
+        0 0 10px #00e5ff,
+        0 0 20px rgba(0, 229, 255, 0.3);
+}
+
+.campo input::placeholder {
+    color: #94a3b8;
+}
+
+.botao {
+    width: 100%;
+    padding: 16px;
+    margin-top: 10px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: linear-gradient(
+        90deg,
+        #00e5ff,
+        #8b5cf6,
+        #ff00ff
+    );
+
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.botao:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 15px #00e5ff,
+        0 0 30px #ff00ff;
+}
+
+.link {
+    display: block;
+    margin-top: 25px;
+
+    text-align: center;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+}
+
+.link button {
+    border: none;
+    background: none;
+    color: #00e5ff;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: inherit;
+}
+
+.link button:hover {
+    text-shadow: 0 0 10px #00e5ff;
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 30px 22px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+}
